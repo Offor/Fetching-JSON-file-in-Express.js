@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Fetching from Express.js</title>
+	<script type="text/javascript" src="https://unpkg.com/vue"></script>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+	<div id="school"> 
+		
+	</div>
+
+	<script type="text/javascript">
+		let school = new Vue({
+			el: '#school',
+			data: {
+				lessons:[],
+			},
+			created: function() {
+				console.log('requesting')
+				fetch('http://localhost:3000/lessons').then(
+					function(res) {
+						res.json().then(
+							function(json) {
+								school.lessons = json;
+								console.log(json);
+							});
+					});
+			}
+		})
+	</script>
+</body>
+</html>
