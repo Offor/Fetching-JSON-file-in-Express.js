@@ -1,0 +1,15 @@
+{
+  "name": "course-work-two",
+  "version": "1.0.0",
+  "description": "Course Work two ",
+  "main": "",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Blessed Offor",
+  "license": "ISC"
+}
